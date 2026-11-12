@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Formula1";
+  src: url("./fonts/Formula1-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1";
+  src: url("./fonts/formula1/Formula1-Bold.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1";
+  src: url("./fonts/formula1/Formula1-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1";
+  src: url("./fonts/formula1/Formula1-Italic.woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Formula1Wide";
+  src: url("./fonts/formula1/Formula1-Wide.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formula1Digits";
+  src: url("./fonts/formula1/Formula1-Year.woff2");
+  font-weight: 400;
+  font-style: normal;
+}

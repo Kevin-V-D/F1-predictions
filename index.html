@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 predictions</title>
+    <link rel="stylesheet" href="fonts.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    @theme {
+      --font-f1: "Formula1";
+    }
+  </style>
+</head>
+<header class="h-12 w-full border-b-black border-b-2 flex grid grid-cols-2 items-center">
+    <a href="index.html" class="text-red-500 text-shadow-black text-2xl text-shadow-lg p-1">F1 PREDICTIONS</a>
+    <a href="login.html" class="justify-self-end bg-blue-500 p-1 px-3 rounded-xl">Make Prediction</a>
+</header>
+
+<main>
+    <body class="flex flex-col items-center bg-[#26262b] text-slate-200 font-f1">
+        <div class="basis-full text-center text-4xl m-30">
+            <h1>
+                F1 predictions
+            </h1>
+            <p class="text-slate-400 text-2xl">Brazil GP</p>
+        </div>
+    
+        <div class="predicion-card-container flex justify-center">
+            <div class="prediction-card grid grid-rows-2 bg-[#15151e] p-8 rounded-2xl border-[#E10600] border-2 shadow-black shadow-lg">
+                <div class="row-span-1 text-slate-400 text-sm">
+                    <p>Username</p>
+                </div>
+                <div class="h-min grid grid-cols-2 gap-5 row-span-1">
+                    <div class="col-1">
+                        <p>Pole Position:</p>
+                        <p>Podium:</p>
+                        <p>Fastest Lap:</p>
+                    </div>
+                    <div class="col-2 text-slate-400 text-sm/6">
+                        <p>Max Verstappen</p>
+                        <p>VER, PIA, TSU</p>
+                        <p>Max Verstappen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
