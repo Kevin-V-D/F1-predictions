@@ -16,3 +16,15 @@
 .f1-select {
     @apply cursor-pointer bg-[#000] text-slate-200 p-2.5 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500;
 }
+
+.btn-container {
+    @apply col-span-2 flex justify-center text-2xl font-bold;
+}
+
+.btn {
+    @apply justify-self-end bg-blue-500 transition-colors p-1 px-3 rounded-xl;
+}
+
+.btn:hover {
+    @apply bg-blue-400 cursor-pointer;
+}

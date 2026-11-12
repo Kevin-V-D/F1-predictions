@@ -91,6 +91,10 @@ function renderDriverOptions($drivers) {
             </select>
           </div>
 
+          <div class="btn-container">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+
         </form>
     </main>
 </body>
