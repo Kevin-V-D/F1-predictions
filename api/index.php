@@ -28,7 +28,7 @@ try {
     <main>
         <div class="text-center mt-15 mb-20">
             <h1 class="text-4xl">F1 PREDICTIONS</h1>
-            <p class="text-slate-400 text-2xl">Brazil GP</p>
+            <p class="text-slate-400 text-2xl">Brazil GP <span class="font-digits">2026</span></p>
         </div>
         
         <div class="prediction-card-container grid grid-cols-1 md:grid-cols-2 gap-5 justify-center w-full max-w-4xl mx-auto px-4">
