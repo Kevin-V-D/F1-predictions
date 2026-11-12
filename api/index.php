@@ -25,7 +25,7 @@ try {
         <a href="index.php" class="text-red-500 text-shadow-black text-lg md:text-2xl text-shadow-lg p-1">F1 PREDICTIONS</a>
         <a href="make_prediction.php" class="btn">Make Prediction</a>
     </header>
-    <main class="w-full max-w-2xl px-4">
+    <main>
         <div class="text-center mt-15 mb-20">
             <h1 class="text-4xl">F1 PREDICTIONS</h1>
             <p class="text-slate-400 text-2xl">Brazil GP</p>
@@ -47,7 +47,7 @@ try {
                                 <p>Podium:</p>
                                 <p>Fastest Lap:</p>
                             </div>
-                            <div class="col-2 text-slate-400 text-sm/6 w-max">
+                            <div class="col-2 text-slate-400 text-sm/6">
                                 <p><?php echo htmlspecialchars($pred['pole_position']); ?></p>
                                 <p><?php echo htmlspecialchars($pred['podium']); ?></p>
                                 <p><?php echo htmlspecialchars($pred['fastest_lap']); ?></p>
