@@ -1,4 +1,5 @@
 <?php
+require_once 'db.php';
 
 // Check if the cookie exists
 $token = $_COOKIE['f1_session'] ?? '';
