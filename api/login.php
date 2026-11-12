@@ -6,7 +6,9 @@ function checkUser($conn) {
     $password = $_POST['password'] ?? '';
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
-    $row = $stmt->execute(['username' => $username]);
+    $stmt->execute(['username' => $username]);
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($row['password'] === $password) {
         echo "username and password are correct";
