@@ -8,7 +8,7 @@ function checkUser($conn) {
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
     $row = $stmt->execute(['username' => $username]);
 
-    if ($row['password'] == $password) {
+    if ($row['password'] === $password) {
         echo "username and password are correct";
     }
     else {
