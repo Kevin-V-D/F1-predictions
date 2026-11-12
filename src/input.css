@@ -42,6 +42,11 @@ form {
     gap-y-5;
 }
 
+.error {
+    @apply
+    hidden;
+}
+
 .column {
     @apply 
     col-span-1 

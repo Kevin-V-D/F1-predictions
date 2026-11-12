@@ -7,6 +7,7 @@
   "routes": [
     { "src": "/make_prediction.php", "dest": "/api/make_prediction.php" },
     { "src": "/prediction_process.php", "dest": "/api/prediction_process.php" },
-    { "src": "/login.php", "dest": "/api/login.php"}
+    { "src": "/login.php", "dest": "/api/login.php"},
+    { "src": "/index.html", "dest": "/index.php" }
   ]
 }
