@@ -37,17 +37,12 @@ function renderDriverOptions($drivers) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F1 predictions</title>
     <link rel="stylesheet" href="fonts.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-    @theme {
-      --font-f1: "Formula1";
-      --font-digits: "Formula1Digits";
-    }
-  </style>
+    <!-- Link your local Tailwind output file -->
+    <link rel="stylesheet" href="../src/output.css">
 </head>
 <body class="flex flex-col items-center bg-[#26262b] text-slate-200 font-f1 min-h-screen">
-    <header class="h-12 w-full border-b-black border-b-2 flex items-center px-4">
-        <a href="index.html" class="text-red-500 text-shadow-black text-lg md:text-2xl text-shadow-lg p-1">F1 PREDICTIONS</a>
+    <header class="nav">
+        <a href="../index.html" class="text-red-500 text-shadow-black text-lg md:text-2xl text-shadow-lg p-1">F1 PREDICTIONS</a>
     </header>
     <main class="flex flex-col items-center px-4 w-full max-w-xl">
       <div class="text-center mt-15 mb-10">
@@ -57,33 +52,33 @@ function renderDriverOptions($drivers) {
             <p class="text-slate-400 text-2xl">Brazil GP</p>
         </div>
 
-        <!-- Clean flat 2-column grid form -->
-        <form action="prediction_process.php" method="post" class="bg-[#15151e] border-red-600 border-2 shadow-black shadow-lg p-8 rounded-xl shadow-xl w-full grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-5">
-          
+        <!-- Prediction Form -->
+        <form action="prediction_process.php" method="post" class="bg-[#15151e] border-red-600 border-2 shadow-black shadow-lg p-8 rounded-xl w-full grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-5">
+         
           <!-- Pole Position -->
           <label for="pole-position" class="justify-self-end font-medium">Pole Position:</label>
           <div>
-            <select class="cursor-pointer bg-[#000] text-slate-200 p-2 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500" name="pole-position" id="pole-position">
+            <select class="f1-select" name="pole-position" id="pole-position">
                 <?php renderDriverOptions($drivers); ?>
             </select>
           </div>
 
-          <!-- Podium Label (Spans 3 rows) -->
+          <!-- Podium Label -->
            <div class="row-span-3 flex flex-col gap-y-6">
             <label for="podium-1" class="text-right font-medium cursor-pointer">Podium: <span class="font-digits ml-9">1</span></label>
             <label for="podium-2" class="text-right font-digits cursor-pointer">2</label>
             <label for="podium-3" class="text-right font-digits cursor-pointer">3</label>
           </div>
           
-          <!-- Podium Selects Container (MUST ALSO span 3 rows so grid tracks align correctly) -->
+          <!-- Podium Selects Container -->
           <div class="flex flex-col gap-y-2 row-span-3">
-            <select class="cursor-pointer bg-[#000] text-slate-200 p-2 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500" name="podium_1" id="podium-1">
+            <select class="f1-select" name="podium_1" id="podium-1">
                 <?php renderDriverOptions($drivers); ?>
             </select>
-            <select class="cursor-pointer bg-[#000] text-slate-200 p-2 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500" name="podium_2" id="podium-2">
+            <select class="f1-select" name="podium_2" id="podium-2">
                 <?php renderDriverOptions($drivers); ?>
             </select>
-            <select class="cursor-pointer bg-[#000] text-slate-200 p-2 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500" name="podium_3" id="podium-3">
+            <select class="f1-select" name="podium_3" id="podium-3">
                 <?php renderDriverOptions($drivers); ?>
             </select>
           </div>
@@ -91,7 +86,7 @@ function renderDriverOptions($drivers) {
           <!-- Fastest Lap -->
           <label for="fastest-lap" class="justify-self-end font-medium">Fastest Lap:</label>
           <div>
-            <select class="cursor-pointer bg-[#000] text-slate-200 p-2 rounded-md w-full border border-slate-700 focus:outline-none focus:border-red-500" name="fastest-lap" id="fastest-lap">
+            <select class="f1-select" name="fastest-lap" id="fastest-lap">
                 <?php renderDriverOptions($drivers); ?>
             </select>
           </div>
