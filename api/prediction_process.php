@@ -1,18 +1,19 @@
 <?php
-$host = $_ENV['POSTGRES_HOST'];
-$port = "6543";
-$dbname = $_ENV['POSTGRES_DATABASE'];
-$user = $_ENV['POSTGRES_USER'];
-$password = $_ENV['POSTGRES_PASSWORD'];
+$url = parse_url(getenv('POSTGRES_URL'));
+
+$host     = $url['host'];
+$port     = $url['port'] ?? '6543';
+$dbname   = ltrim($url['path'], '/');
+$user     = $url['user'];
+$password = $url['pass'];
 
 try {
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
     $pdo = new PDO($dsn, $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_EMULATE_PREPARES => true
     ]);
-    
-    echo "Connected to Supabase PostgreSQL successfully via PHP!";
 } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    die("Database connection failed: " . $e->getMessage());
 }
 ?>
