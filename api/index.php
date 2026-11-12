@@ -1,5 +1,5 @@
 <?php
-require_once 'api/db.php';
+require_once 'db.php';
 
 // Fetch all predictions from the database 
 // (Assuming you have a table named 'predictions' joined with 'users')
