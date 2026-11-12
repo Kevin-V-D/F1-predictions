@@ -1,11 +1,5 @@
 <?php
-$url = parse_url(getenv('POSTGRES_URL'));
-
-$host     = $url['host'];
-$port     = $url['port'] ?? '6543';
-$dbname   = ltrim($url['path'], '/');
-$user     = $url['user'];
-$password = $url['pass'];
+require_once 'db.php';
 
 function postPrediction($conn) {
     // Only process if it's a POST request
@@ -37,13 +31,7 @@ function postPrediction($conn) {
     }
 }
 
-try {
-    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
-    $conn = new PDO($dsn, $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_EMULATE_PREPARES => true
-    ]);
-    
+try { 
     // Call the function to handle submissions when the script is hit
     postPrediction($conn);
     header("location: ../index.html");

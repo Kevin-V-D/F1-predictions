@@ -40,7 +40,7 @@ function renderDriverOptions($drivers) {
     <!-- Link your local Tailwind output file -->
     <link rel="stylesheet" href="../src/output.css">
 </head>
-<body class="flex flex-col items-center bg-[#26262b] text-slate-200 font-f1 min-h-screen">
+<body>
     <header class="nav">
         <a href="../index.html" class="text-red-500 text-shadow-black text-lg md:text-2xl text-shadow-lg p-1">F1 PREDICTIONS</a>
     </header>
@@ -53,7 +53,7 @@ function renderDriverOptions($drivers) {
         </div>
 
         <!-- Prediction Form -->
-        <form action="prediction_process.php" method="post" class="bg-[#15151e] border-red-600 border-2 shadow-black shadow-lg p-8 rounded-xl w-full grid grid-cols-[auto_1fr] items-center gap-x-6 gap-y-5">
+        <form action="prediction_process.php" method="post">
          
           <!-- Pole Position -->
           <label for="pole-position" class="justify-self-end font-medium">Pole Position:</label>
