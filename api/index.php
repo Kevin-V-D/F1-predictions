@@ -47,7 +47,7 @@ try {
                                 <p>Podium:</p>
                                 <p>Fastest Lap:</p>
                             </div>
-                            <div class="col-2 text-slate-400 text-sm/6">
+                            <div class="col-2 text-slate-400 text-sm/6 w-max">
                                 <p><?php echo htmlspecialchars($pred['pole_position']); ?></p>
                                 <p><?php echo htmlspecialchars($pred['podium']); ?></p>
                                 <p><?php echo htmlspecialchars($pred['fastest_lap']); ?></p>
