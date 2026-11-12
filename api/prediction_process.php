@@ -36,7 +36,7 @@ function postPrediction($conn) {
             $stmt->execute([
                 'username'      => "test-user",
                 'pole_position' => $polePosition,
-                'podium'        => $podiumString,
+                'podium'        => $podium,
                 'fastest_lap'   => $fastestLap
             ]);
 
