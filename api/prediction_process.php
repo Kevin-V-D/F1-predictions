@@ -7,7 +7,7 @@ $dbname   = ltrim($url['path'], '/');
 $user     = $url['user'];
 $password = $url['pass'];
 
-echo $_POST;
+echo implode(",", $array);
 
 function postPrediction($conn) {
     // Only process if it's a POST request
