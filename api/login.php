@@ -1,5 +1,9 @@
 <?php
 session_start();
+echo "Current Session Data: <br>";
+var_dump($_SESSION);
+exit();
+
 require_once 'db.php';
 
 function checkUser($conn) {
@@ -27,9 +31,8 @@ try {
     header("Location: make_prediction.php");
     exit();
 } catch (\Throwable $th) {
-    echo $th->getMessage();
     // Pass ?error=1 so the JS error banner shows up on failure
-    // header("Location: login.html?error=1");
-    // exit();
+    header("Location: login.html?error=1");
+    exit();
 }
 ?>
