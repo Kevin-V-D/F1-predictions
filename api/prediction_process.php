@@ -16,17 +16,11 @@ function postPrediction($conn) {
         $polePosition = $_POST['pole-position'] ?? '';
         $fastestLap   = $_POST['fastest-lap'] ?? '';
 
-        $podium = [
-            $_POST['podium-1'] ?? '',
-            $_POST['podium-2'] ?? '',
-            $_POST['podium-3'] ?? ''
-        ];
+        $podium1 = $_POST['podium-1'] ?? '';
+        $podium2 = $_POST['podium-2'] ?? '';
+        $podium3 = $_POST['podium-3'] ?? '';
 
-        $escapedDrivers = array_map(function($driver) {
-            return '"' . str_replace('"', '""', trim($driver)) . '"';
-        }, $podium);
-        
-        $podiumString = '{' . implode(',', $escapedDrivers) . '}';
+        $podium = $podium1 . ', ' . $podium2 . ', ' . $podium3;
 
         try {
             // Everything database-related goes safely inside the POST block
