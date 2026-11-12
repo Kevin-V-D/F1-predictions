@@ -13,13 +13,13 @@ function postPrediction($conn) {
     // Only process if it's a POST request
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username     = $_POST['username'] ?? '';
-        $polePosition = $_POST['pole_position'] ?? '';
-        $fastestLap   = $_POST['fastest_lap'] ?? '';
+        $polePosition = $_POST['pole-position'] ?? '';
+        $fastestLap   = $_POST['fastest-lap'] ?? '';
 
         $podium = [
-            $_POST['podium1'] ?? '',
-            $_POST['podium2'] ?? '',
-            $_POST['podium3'] ?? ''
+            $_POST['podium-1'] ?? '',
+            $_POST['podium-2'] ?? '',
+            $_POST['podium-3'] ?? ''
         ];
 
         $escapedDrivers = array_map(function($driver) {
