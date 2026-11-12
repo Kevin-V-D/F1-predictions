@@ -7,8 +7,6 @@ $dbname   = ltrim($url['path'], '/');
 $user     = $url['user'];
 $password = $url['pass'];
 
-echo implode(",", $_POST);
-
 function postPrediction($conn) {
     // Only process if it's a POST request
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -49,7 +47,9 @@ try {
     // Call the function to handle submissions when the script is hit
     postPrediction($conn);
     header("location: ../index.html");
+    exit();
 } catch (PDOException $e) {
+    echo implode(",", $_POST);
     die("Database connection failed: " . $e->getMessage());
 }
 ?>
