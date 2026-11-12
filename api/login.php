@@ -15,18 +15,20 @@ function checkUser($conn) {
         throw new Exception("Wrong username or password", 1);
     }
 
+    // Prevent session fixation attacks
+    session_regenerate_id(true);
+
     $_SESSION['id'] = $row['id'];
     $_SESSION['username'] = $row['username'];
 }
 
 try {
     checkUser($conn);
-    header("location: make_prediction.php");
+    header("Location: make_prediction.php");
     exit();
 } catch (\Throwable $th) {
-    // echo $th->getMessage();
-    header("location: login.html");
+    // Pass ?error=1 so the JS error banner shows up on failure
+    header("Location: login.html?error=1");
     exit();
 }
-
 ?>
