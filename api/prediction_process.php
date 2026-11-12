@@ -33,8 +33,6 @@ function postPrediction($conn) {
                 'podium'        => $podium,
                 'fastest_lap'   => $fastestLap
             ]);
-
-            echo "Prediction saved successfully!";
         } catch (PDOException $e) {
             echo "Insert failed: " . $e->getMessage();
         }
@@ -50,7 +48,7 @@ try {
     
     // Call the function to handle submissions when the script is hit
     postPrediction($conn);
-
+    header("location: ../index.html");
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
