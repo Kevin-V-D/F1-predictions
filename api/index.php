@@ -31,13 +31,13 @@ try {
             <p class="text-slate-400 text-2xl">Brazil GP</p>
         </div>
         
-        <div class="prediction-card-container flex flex-col gap-5 justify-center">
+        <div class="prediction-card-container grid grid-cols-1 md:grid-cols-2 gap-5 justify-center w-full max-w-4xl mx-auto px-4">
             <?php if (empty($predictions)): ?>
                 <p class="text-center text-slate-500">No predictions submitted yet!</p>
             <?php else: ?>
                 <!-- Loop through every prediction row from the database -->
                 <?php foreach ($predictions as $pred): ?>
-                    <div class="prediction-card">
+                    <div class="prediction-card col-span-1">
                         <div class="row-span-1 text-slate-400 text-sm">
                             <p><?php echo htmlspecialchars($pred['username']); ?></p>
                         </div>
