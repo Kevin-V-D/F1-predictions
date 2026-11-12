@@ -10,10 +10,7 @@ function checkUser($conn) {
 
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($row['password'] === $password) {
-        echo "username and password are correct";
-    }
-    else {
+    if ($row['password'] !== $password) {
         throw new Exception("Wrong username or password", 1);
     }
 }
