@@ -16,9 +16,9 @@ function postPrediction($conn) {
         $polePosition = $_POST['pole-position'] ?? '';
         $fastestLap   = $_POST['fastest-lap'] ?? '';
 
-        $podium1 = $_POST['podium-1'] ?? '';
-        $podium2 = $_POST['podium-2'] ?? '';
-        $podium3 = $_POST['podium-3'] ?? '';
+        $podium1 = $_POST['podium_1'] ?? '';
+        $podium2 = $_POST['podium_2'] ?? '';
+        $podium3 = $_POST['podium_3'] ?? '';
 
         $podium = $podium1 . ', ' . $podium2 . ', ' . $podium3;
 
