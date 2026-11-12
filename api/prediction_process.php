@@ -1,10 +1,16 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("location: ../login.html");
+}
+
 require_once 'db.php';
 
 function postPrediction($conn) {
     // Only process if it's a POST request
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username     = $_POST['username'] ?? '';
+        $username     = $_SESSION['username'] ?? '';
         $polePosition = $_POST['pole-position'] ?? '';
         $fastestLap   = $_POST['fastest-lap'] ?? '';
 

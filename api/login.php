@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'db.php';
 
 function checkUser($conn) {
@@ -13,6 +14,9 @@ function checkUser($conn) {
     if (!$row || $row['password'] !== $password) {
         throw new Exception("Wrong username or password", 1);
     }
+
+    $_SESSION['id'] = $row['id'];
+    $_SESSION['username'] = $row['username'];
 }
 
 try {

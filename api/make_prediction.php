@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("location: ../login.html");
+}
+
 $drivers = [
     "NOR" => "Lando Norris",
     "PIA" => "Oscar Piastri",
