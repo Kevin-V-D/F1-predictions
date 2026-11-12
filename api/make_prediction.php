@@ -70,7 +70,7 @@ function renderDriverOptions($drivers) {
 
           <!-- Podium Label (Spans 3 rows) -->
            <div class="row-span-3 flex flex-col gap-y-6">
-            <label for="podium-1" class="text-right font-medium cursor-pointer">Podium: <span class="font-digits ml-2">1</span></label>
+            <label for="podium-1" class="text-right font-medium cursor-pointer">Podium: <span class="font-digits ml-4">1</span></label>
             <label for="podium-2" class="text-right font-digits cursor-pointer">2</label>
             <label for="podium-3" class="text-right font-digits cursor-pointer">3</label>
           </div>
