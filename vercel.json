@@ -1,6 +1,6 @@
 {
   "functions": {
-    "**/*.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
@@ -8,6 +8,6 @@
     { "src": "/make_prediction.php", "dest": "/api/make_prediction.php" },
     { "src": "/prediction_process.php", "dest": "/api/prediction_process.php" },
     { "src": "/login.php", "dest": "/api/login.php"},
-    { "src": "/index.html", "dest": "/index.php" }
+    { "src": "/index.html", "dest": "/api/index.php" }
   ]
 }
