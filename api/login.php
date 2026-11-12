@@ -15,14 +15,17 @@ function checkUser($conn) {
     }
     else {
         throw new Exception("Wrong username or password", 1);
-        
     }
 }
 
 try {
     checkUser($conn);
+    header("location: make_prediction.php");
+    exit();
 } catch (\Throwable $th) {
-    echo $th->getMessage();
+    // echo $th->getMessage();
+    header("location: login.html");
+    exit();
 }
 
 ?>
