@@ -1,8 +1,20 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['id'])) {
-    header("location: ../login.html");
+// Check if the cookie exists
+$token = $_COOKIE['f1_session'] ?? '';
+$currentUser = null;
+
+if (!empty($token)) {
+    // Look up the user by their session token in the database
+    $stmt = $conn->prepare("SELECT id, username FROM users WHERE session_token = :token");
+    $stmt->execute(['token' => $token]);
+    $currentUser = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+// If no valid user is found, kick them back to login
+if (!$currentUser) {
+    header("Location: ../login.html");
+    exit();
 }
 
 $drivers = [
