@@ -1,6 +1,6 @@
 <?php
 $host = $_ENV['POSTGRES_HOST'];
-$port = "6543";
+$port = "5432";
 $dbname = $_ENV['POSTGRES_DATABASE'];
 $user = $_ENV['POSTGRES_USER'];
 $password = $_ENV['POSTGRES_PASSWORD'];
