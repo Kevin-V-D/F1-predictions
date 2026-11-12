@@ -92,7 +92,7 @@ function renderDriverOptions($drivers) {
           </div>
 
           <div class="btn-container">
-            <button class="btn w-50 font-f1" type="submit">Submit</button>
+            <button class="btn w-50" type="submit">SUBMIT</button>
           </div>
 
         </form>
