@@ -25,7 +25,7 @@ function postPrediction($conn) {
             VALUES (:username, :pole_position, :podium, :fastest_lap)");
             
             $stmt->execute([
-                'username'      => "test-user",
+                'username'      => $username,
                 'pole_position' => $polePosition,
                 'podium'        => $podium,
                 'fastest_lap'   => $fastestLap
