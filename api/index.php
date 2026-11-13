@@ -43,7 +43,7 @@ try {
                         </div>
                         <div class="h-min grid grid-cols-2 gap-5 row-span-1">
                             <div class="col-1">
-                                <p>Pole Position:</p>
+                                <p class="truncate">Pole Position:</p>
                                 <p>Podium:</p>
                                 <p>Fastest Lap:</p>
                             </div>
