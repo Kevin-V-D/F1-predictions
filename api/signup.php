@@ -2,17 +2,25 @@
 require_once 'db.php';
 
 function CreateUser($conn) {
-    $conn->prepare("
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
+
+    $stmt = $conn->prepare("
     INSERT INTO users (username, password)
     VALUES (:username, :password)
     ");
+
+    $stmt->execute([
+        'username' => $username,
+        'password' => $password
+        ]);
 }
 
 try {
     CreateUser($conn);
     header("location: login.html");
-} catch (\Throwable $th) {
-    echo $th->getMessage();
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
 
 ?>
