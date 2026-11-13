@@ -8,6 +8,7 @@
     { "src": "/make_prediction.php", "dest": "/api/make_prediction.php" },
     { "src": "/prediction_process.php", "dest": "/api/prediction_process.php" },
     { "src": "/login.php", "dest": "/api/login.php"},
+    { "src": "/signup.php", "dest": "/api/signup.php"},
     { "src": "/index.html", "dest": "/api/index.php" },
     { "src": "/", "dest": "/api/index.php" }
   ]

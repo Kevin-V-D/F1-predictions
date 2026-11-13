@@ -60,8 +60,13 @@ form {
     @apply
     border-2
     border-red-600
-    px-2
+    p-2
     rounded-md;
+}
+
+.link {
+    @apply text-blue-500 
+    underline;
 }
 
 .prediction-card {
@@ -102,11 +107,11 @@ form {
 
 .btn {
     @apply 
+    disabled:bg-slate-500
     justify-self-end 
     bg-blue-500 
     transition-colors 
-    p-1 
-    px-3 
+    p-2
     rounded-xl;
 }
 
