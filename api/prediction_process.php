@@ -9,7 +9,7 @@ require_once 'db.php';
 function postPrediction($conn) {
     // Only process if it's a POST request
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username     = $_SESSION['username'] ?? '';
+        $username     = $_POST['username'] ?? '';
         $polePosition = $_POST['pole-position'] ?? '';
         $fastestLap   = $_POST['fastest-lap'] ?? '';
 
