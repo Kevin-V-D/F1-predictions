@@ -73,6 +73,10 @@ function renderDriverOptions($drivers) {
 
         <!-- Prediction Form -->
         <form action="prediction_process.php" method="post">
+
+        <div class="hidden">
+            <input type="text" name="username" value="<?= htmlspecialchars($currentUser['username']) ?>">
+        </div>
          
           <!-- Pole Position -->
           <label for="pole-position" class="justify-self-end font-medium">Pole Position:</label>
