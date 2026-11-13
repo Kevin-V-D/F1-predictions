@@ -20,7 +20,7 @@ try {
     CreateUser($conn);
     header("location: login.html");
 } catch (PDOException $e) {
-    echo $e->getMessage();
+    header("location: signup.html?error=1");
 }
 
 ?>
